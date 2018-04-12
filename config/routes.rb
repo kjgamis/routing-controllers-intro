@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/' => 'pages#welcome'
+  root 'pages#welcome'
 
   get '/welcome' => 'pages#welcome'
 
@@ -9,12 +9,10 @@ Rails.application.routes.draw do
 
   get '/contest' => 'pages#contest'
 
-  get '/kitten/:size' => 'pages#kitten'
+  get '/kitten/:size' => 'pages#kitten', as: 'kittn'
 
-  get '/kittens/:size' => 'pages#kittens'
+  get '/kittens/:size' => 'pages#kittens', as: 'kittens'
 
-  get '/contest/' => 'pages#contest'
-
-  get '/secrets/:magic_word' => 'pages#secrets'
+  get '/secrets/:magic_word' => 'pages#secrets', as: 'magic'
 
 end
