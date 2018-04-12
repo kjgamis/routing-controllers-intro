@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/' => 'pages#welcome'
 
+  get '/welcome' => 'pages#welcome'
+
   get '/about' => 'pages#about'
 
   get '/contest' => 'pages#contest'
@@ -10,4 +12,6 @@ Rails.application.routes.draw do
   get '/kitten/:size' => 'pages#kitten'
 
   get '/kittens/:size' => 'pages#kittens'
+
+  get '/contest' => 'pages#contest'
 end
